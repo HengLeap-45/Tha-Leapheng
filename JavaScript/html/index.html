@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+
+</head>
+<body>
+     <script>
+        function changeImage()
+       {
+        element=document.getElementById("myImage");
+        if (element.src.match("bulbon")){
+            element.src="image.jpg";
+        }
+        else {
+            element.src="bulb_off.png";
+        }
+       }
+    </script>
+    <img id="myImage" onclick="changeImage()" src="bulb_off.png" width="100" height="200">
+   <p> click the light bulb to turn on/off the light </p>
+    
+</body>
+</html>
