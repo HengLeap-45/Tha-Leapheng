@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ISTAD FOR PRESENTATION</title>
+		<style>
+			.container {
+				display: grid; /*(this is used for making grid)*/
+				grid-template-columns: 200px 200px 200px; /*(grid-template-columns is used for making columns use with px and fr)*/
+				grid-template-rows: 100px 100px 100px 100px; /*(grid-template-rows is use for making rows with px and fr)*/
+				background-color: rgb(236, 236, 243);
+				color: yellow;
+				border: 2px solid red;
+				gap: 30px; /*(gap we use for space)*/
+				text-align: center;
+				padding: 30px;
+				row-gap: 200px;
+				column-gap: 150px;
+				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			}
+			/*(this is for testing Grid CSS )*/
+
+			.container div {
+				color: Black; /*(color is used for making the color of the text)*/
+				background-color: white; /*(background-color is used for making the background color)*/
+				text-align: center; /*(text-align is use for making text center)*/
+				padding: 45px; /*(padding is use for making space around the items)*/
+				font-size: 25px; /*(font-size is use for making the size of text)*/
+				border-radius: 15px; /*(border-radius is used for making the corner of the items)*/
+				justify-items: center; /*(justify-items is use for making items center)*/
+				margin: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div>Item1</div>
+			<div>Item2</div>
+			<div>Item3</div>
+			<div>Item4</div>
+			<div>Item5</div>
+			<div>Item6</div>
+			<div>Item7</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!--CSS container-->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.grid-container {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr; /* ៣ ជួរ */
+				grid-template-rows: 100px 100px 100px 100px; /* ២ ជួរ */
+				gap: 50px; /* ចន្លោះ */
+				padding: 20px;
+				background: #f0f0f0;
+				grid-template-columns: repeat(10, 1fr);
+				grid-template-rows: repeat(18, 1fr);
+			}
+
+			.item {
+				background: #2196f3;
+				color: white;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 30px;
+				border-radius: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grid-container">
+			<div class="item item1">1</div>
+			<div class="item item2">2</div>
+			<div class="item item3">3</div>
+			<div class="item item4">4</div>
+			<div class="item item5">5</div>
+			<div class="item item6">6</div>
+		</div>
+	</body>
+</html>
