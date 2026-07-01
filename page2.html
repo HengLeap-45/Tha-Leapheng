@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Tailwind CSS Dashboard - Page 2</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to the style.css which compiles Tailwind CSS v4 via Vite -->
+    <link rel="stylesheet" href="/src/style.css" />
+
+    <style>
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-550 min-h-screen bg-linear-to-br from-slate-50 via-slate-100 to-indigo-50/50 text-slate-800 antialiased transition-colors duration-300 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950/20 dark:text-slate-100"
+  >
+    <!-- Navigation Bar -->
+    <nav
+      class="sticky top-0 z-50 border-b border-slate-200/50 bg-white/70 px-6 py-4 backdrop-blur-md transition-all dark:border-slate-800/50 dark:bg-slate-900/70"
+    >
+      <div class="mx-auto flex max-w-7xl items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div
+            class="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-tr from-indigo-500 to-violet-600 text-xl font-extrabold text-white shadow-lg shadow-indigo-500/30"
+          >
+            A
+          </div>
+          <div>
+            <span
+              class="bg-linear-to-r from-indigo-600 to-violet-500 bg-clip-text text-lg font-bold tracking-tight text-transparent dark:from-indigo-400 dark:to-violet-300"
+              >Antigravity Hub</span
+            >
+            <span class="block text-xs font-medium text-slate-500"
+              >Tailwind v4 Sandbox</span
+            >
+          </div>
+        </div>
+
+        <ul class="hidden items-center gap-8 text-sm font-semibold md:flex">
+          <li>
+            <a
+              href="/index.html"
+              class="dark:text-slate-350 text-slate-600 transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="/index2.html"
+              class="dark:text-slate-350 text-slate-600 transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Grid Demo</a
+            >
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-indigo-600 underline decoration-2 underline-offset-4 dark:text-indigo-400"
+              >Dashboard (Page 2)</a
+            >
+          </li>
+          <li>
+            <a
+              href="/testing.html"
+              class="dark:text-slate-350 text-slate-600 transition-colors hover:text-indigo-600 dark:hover:text-indigo-400"
+              >Testing</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+          <!-- Live Status Indicator -->
+          <span class="relative flex h-3 w-3">
+            <span
+              class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"
+            ></span>
+            <span
+              class="relative inline-flex h-3 w-3 rounded-full bg-emerald-500"
+            ></span>
+          </span>
+          <span
+            class="hidden text-xs font-semibold text-slate-500 sm:inline-block dark:text-slate-400"
+            >Vite Dev Mode Active</span
+          >
+
+          <button
+            id="themeToggle"
+            class="rounded-lg bg-slate-100 p-2 text-slate-700 transition-colors hover:bg-slate-200 dark:bg-slate-800 dark:text-slate-300 dark:hover:bg-slate-700"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-5 w-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Hero Header -->
+    <main class="mx-auto max-w-7xl px-6 py-12">
+      <header class="relative mb-16 text-center md:text-left">
+        <div
+          class="absolute -top-12 -left-12 -z-10 h-72 w-72 animate-pulse rounded-full bg-indigo-500/10 blur-3xl"
+        ></div>
+        <div
+          class="absolute top-20 right-10 -z-10 h-96 w-96 rounded-full bg-purple-500/10 blur-3xl"
+        ></div>
+
+        <div
+          class="mb-4 inline-flex items-center gap-2 rounded-full bg-indigo-500/10 px-3 py-1 text-xs font-bold tracking-widest text-indigo-600 uppercase dark:text-indigo-300"
+        >
+          ⚡ Tailwind CSS v4 + Vite Setup
+        </div>
+        <h1
+          class="mb-4 text-4xl leading-tight font-extrabold tracking-tight text-slate-900 md:text-6xl dark:text-white"
+        >
+          Interactive Design <br class="hidden md:inline" />
+          <span
+            class="bg-linear-to-r from-indigo-600 via-violet-600 to-pink-500 bg-clip-text text-transparent dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400"
+            >Playground & Analytics</span
+          >
+        </h1>
+        <p
+          class="max-w-2xl text-lg leading-relaxed text-slate-600 md:text-xl dark:text-slate-300"
+        >
+          Welcome to your newly created page. This page dynamically compiles
+          styles in real-time. Try updating classes and watch the preview update
+          instantly!
+        </p>
+      </header>
+
+      <!-- Stats Grid -->
+      <section class="mb-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <!-- Card 1 -->
+        <div
+          class="group relative rounded-2xl border border-slate-200/60 bg-white/50 p-6 shadow-sm backdrop-blur-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:border-slate-800/60 dark:bg-slate-900/50"
+        >
+          <div class="mb-4 flex items-center justify-between">
+            <span
+              class="text-sm font-semibold text-slate-500 dark:text-slate-400"
+              >Total Visits</span
+            >
+            <span
+              class="rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-xs font-semibold text-emerald-600 dark:text-emerald-400"
+              >+12% Today</span
+            >
+          </div>
+          <div
+            class="text-3xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400"
+          >
+            8,245
+          </div>
+          <p class="mt-2 text-xs text-slate-500">
+            Unique users visiting this sandbox page.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="group relative rounded-2xl border border-slate-200/60 bg-white/50 p-6 shadow-sm backdrop-blur-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:border-slate-800/60 dark:bg-slate-900/50"
+        >
+          <div class="mb-4 flex items-center justify-between">
+            <span
+              class="text-sm font-semibold text-slate-500 dark:text-slate-400"
+              >Build Speed</span
+            >
+            <span
+              class="rounded-full bg-indigo-500/10 px-2.5 py-0.5 text-xs font-semibold text-indigo-600 dark:text-indigo-400"
+              >Vite HMR</span
+            >
+          </div>
+          <div
+            class="text-3xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400"
+          >
+            14ms
+          </div>
+          <p class="mt-2 text-xs text-slate-500">
+            Tailwind compile and update speed in your browser.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="group relative rounded-2xl border border-slate-200/60 bg-white/50 p-6 shadow-sm backdrop-blur-xs transition-all duration-300 hover:-translate-y-1 hover:shadow-md dark:border-slate-800/60 dark:bg-slate-900/50"
+        >
+          <div class="mb-4 flex items-center justify-between">
+            <span
+              class="text-sm font-semibold text-slate-500 dark:text-slate-400"
+              >Components Sandbox</span
+            >
+            <span
+              class="rounded-full bg-purple-500/10 px-2.5 py-0.5 text-xs font-semibold text-purple-600 dark:text-purple-400"
+              >Custom UI</span
+            >
+          </div>
+          <div
+            class="text-3xl font-bold tracking-tight text-slate-900 transition-colors group-hover:text-indigo-600 dark:text-white dark:group-hover:text-indigo-400"
+          >
+            Tailwind CSS v4
+          </div>
+          <p class="mt-2 text-xs text-slate-500">
+            Using the latest styling framework engine.
+          </p>
+        </div>
+      </section>
+
+      <!-- Main Layout Section: Interactive Playground & Guide -->
+      <section class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <!-- Interactive Elements Playground (Left 2 cols) -->
+        <div class="space-y-8 lg:col-span-2">
+          <div
+            class="rounded-2xl border border-slate-200/60 bg-white p-8 shadow-sm dark:border-slate-800/60 dark:bg-slate-900"
+          >
+            <h2 class="mb-2 text-2xl font-bold text-slate-950 dark:text-white">
+              Beautiful Tailwind UI Sandbox
+            </h2>
+            <p class="mb-6 text-sm text-slate-500 dark:text-slate-400">
+              Interactive custom styling demonstrations designed to showcase
+              Tailwind's capabilities.
+            </p>
+
+            <!-- Buttons Showcase -->
+            <div class="space-y-4">
+              <h3
+                class="text-sm font-bold tracking-wider text-slate-900 uppercase dark:text-white"
+              >
+                Button Styles
+              </h3>
+              <div class="flex flex-wrap gap-4">
+                <button
+                  class="rounded-xl bg-linear-to-r from-indigo-600 to-violet-600 px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-indigo-500/20 transition-all hover:-translate-y-0.5 hover:from-indigo-500 hover:to-violet-500 hover:shadow-lg hover:shadow-indigo-500/30"
+                >
+                  Gradient Primary
+                </button>
+                <button
+                  class="rounded-xl bg-slate-900 px-6 py-2.5 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-slate-800 dark:bg-slate-800 dark:text-slate-200 dark:hover:bg-slate-700"
+                >
+                  Solid Slate
+                </button>
+                <button
+                  class="rounded-xl border border-indigo-500/20 bg-indigo-500/10 px-6 py-2.5 text-sm font-bold text-indigo-600 transition-all hover:-translate-y-0.5 hover:bg-indigo-500/20 dark:text-indigo-300"
+                >
+                  Soft Outline
+                </button>
+                <button
+                  class="dark:hover:text-slate-250 rounded-xl px-6 py-2.5 text-sm font-bold text-slate-600 transition-colors hover:text-slate-900 dark:text-slate-400"
+                >
+                  Minimal Link
+                </button>
+              </div>
+            </div>
+
+            <!-- Accent Coloring Checkbox & Radio Showcase -->
+            <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
+              <div
+                class="dark:bg-slate-850/50 rounded-xl border border-slate-200/40 bg-slate-50 p-5 dark:border-slate-800/40"
+              >
+                <h4
+                  class="mb-3 text-sm font-bold text-slate-900 dark:text-white"
+                >
+                  Modern Input Accents
+                </h4>
+                <div class="space-y-2">
+                  <label
+                    class="flex cursor-pointer items-center gap-3 text-sm font-medium"
+                  >
+                    <input
+                      type="checkbox"
+                      checked
+                      class="h-4.5 w-4.5 rounded accent-indigo-600"
+                    />
+                    <span>Indigo Checkbox Accent</span>
+                  </label>
+                  <label
+                    class="flex cursor-pointer items-center gap-3 text-sm font-medium"
+                  >
+                    <input
+                      type="checkbox"
+                      checked
+                      class="h-4.5 w-4.5 rounded accent-pink-600"
+                    />
+                    <span>Pink Checkbox Accent</span>
+                  </label>
+                  <label
+                    class="flex cursor-pointer items-center gap-3 text-sm font-medium"
+                  >
+                    <input
+                      type="checkbox"
+                      checked
+                      class="h-4.5 w-4.5 rounded accent-emerald-500"
+                    />
+                    <span>Emerald Checkbox Accent</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Interactive Counter Card -->
+              <div
+                class="dark:bg-slate-850/50 flex flex-col justify-between rounded-xl border border-slate-200/40 bg-slate-50 p-5 dark:border-slate-800/40"
+              >
+                <div>
+                  <h4
+                    class="mb-1 text-sm font-bold text-slate-900 dark:text-white"
+                  >
+                    State Counter Widget
+                  </h4>
+                  <p class="mb-4 text-xs text-slate-500">
+                    Click below to update the reactive state.
+                  </p>
+                </div>
+                <div class="flex items-center gap-4">
+                  <button
+                    id="pageCounterBtn"
+                    class="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-indigo-500"
+                  >
+                    Increment
+                  </button>
+                  <div
+                    class="text-sm font-semibold text-slate-700 dark:text-slate-300"
+                  >
+                    Count:
+                    <span
+                      id="counterVal"
+                      class="font-mono text-base font-bold text-indigo-600 dark:text-indigo-400"
+                      >0</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Visual Layout Grid Demo -->
+            <div class="mt-8">
+              <h3
+                class="mb-4 text-sm font-bold tracking-wider text-slate-900 uppercase dark:text-white"
+              >
+                Grid Layout Columns (Responsive)
+              </h3>
+              <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+                <div
+                  class="rounded-xl border border-indigo-200/30 bg-indigo-50 p-4 text-center text-xs font-bold text-indigo-600 dark:bg-indigo-950/30 dark:text-indigo-400"
+                >
+                  Col 1
+                </div>
+                <div
+                  class="rounded-xl border border-violet-200/30 bg-violet-50 p-4 text-center text-xs font-bold text-violet-600 dark:bg-violet-950/30 dark:text-violet-400"
+                >
+                  Col 2
+                </div>
+                <div
+                  class="rounded-xl border border-purple-200/30 bg-purple-50 p-4 text-center text-xs font-bold text-purple-600 dark:bg-purple-950/30 dark:text-purple-400"
+                >
+                  Col 3
+                </div>
+                <div
+                  class="rounded-xl border border-pink-200/30 bg-pink-50 p-4 text-center text-xs font-bold text-pink-600 dark:bg-pink-950/30 dark:text-pink-400"
+                >
+                  Col 4
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Explanatory Guide Card (Right 1 col) -->
+        <div class="space-y-6">
+          <div
+            class="rounded-2xl border border-slate-200/60 bg-linear-to-b from-slate-900 to-indigo-950 p-6 text-white shadow-xl shadow-indigo-950/20 dark:border-slate-800/60"
+          >
+            <h3 class="mb-4 flex items-center gap-2 text-lg font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="h-5 w-5 text-indigo-400"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9.663 17h4.673M12 3v1m6.364.364l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                />
+              </svg>
+              Quick Setup Guide
+            </h3>
+
+            <ul class="space-y-4 text-sm text-slate-300">
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-500/20 text-xs font-bold text-indigo-400"
+                >
+                  1
+                </div>
+                <div>
+                  <strong class="text-white">Start Dev Server</strong>
+                  <p class="mt-1 text-xs text-slate-400">
+                    Run
+                    <code
+                      class="rounded bg-slate-800/80 px-1 py-0.5 font-mono text-indigo-300"
+                      >npm run dev</code
+                    >
+                    inside your terminal.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-500/20 text-xs font-bold text-indigo-400"
+                >
+                  2
+                </div>
+                <div>
+                  <strong class="text-white">Visit Your Page</strong>
+                  <p class="mt-1 text-xs text-slate-400">
+                    Go to
+                    <a
+                      href="http://localhost:5173/page2.html"
+                      target="_blank"
+                      class="font-mono text-indigo-400 underline hover:text-indigo-300"
+                      >localhost:5173/page2.html</a
+                    >
+                    in your browser.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <div
+                  class="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-indigo-500/20 text-xs font-bold text-indigo-400"
+                >
+                  3
+                </div>
+                <div>
+                  <strong class="text-white">Save & Hot Reload</strong>
+                  <p class="mt-1 text-xs text-slate-400">
+                    Edit any code. The Vite server re-compiles files instantly!
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Quick Navigation Card -->
+          <div
+            class="rounded-2xl border border-slate-200/60 bg-white/50 p-6 shadow-sm dark:border-slate-800/60 dark:bg-slate-900/50"
+          >
+            <h3
+              class="mb-4 text-sm font-bold tracking-wider text-slate-900 uppercase dark:text-white"
+            >
+              Project Map
+            </h3>
+            <div class="space-y-2 text-sm">
+              <a
+                href="/index.html"
+                class="dark:text-slate-350 flex items-center justify-between rounded-lg p-2.5 text-slate-700 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800"
+              >
+                <span class="font-medium">index.html (Home)</span>
+                <span class="text-xs text-slate-500">HTML Playroom</span>
+              </a>
+              <a
+                href="/index2.html"
+                class="dark:text-slate-350 flex items-center justify-between rounded-lg p-2.5 text-slate-700 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800"
+              >
+                <span class="font-medium">index2.html</span>
+                <span class="text-xs text-slate-500">Grid Test</span>
+              </a>
+              <a
+                href="/testing.html"
+                class="dark:text-slate-350 flex items-center justify-between rounded-lg p-2.5 text-slate-700 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800"
+              >
+                <span class="font-medium">testing.html</span>
+                <span class="text-xs text-slate-500">Sandbox Test</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="mt-20 border-t border-slate-200/50 bg-white/30 py-8 backdrop-blur-xs dark:border-slate-800/50 dark:bg-slate-950/20"
+    >
+      <div
+        class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-xs font-semibold text-slate-500 sm:flex-row"
+      >
+        <div>© 2026 Antigravity. Built with Tailwind CSS v4 and Vite.</div>
+        <div class="flex items-center gap-6">
+          <a
+            href="https://tailwindcss.com"
+            target="_blank"
+            class="transition-colors hover:text-slate-800 dark:hover:text-slate-300"
+            >Tailwind CSS Docs</a
+          >
+          <a
+            href="https://vite.dev"
+            target="_blank"
+            class="transition-colors hover:text-slate-800 dark:hover:text-slate-300"
+            >Vite Docs</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive JS scripts -->
+    <script>
+      // Counter Interactive Element
+      const countBtn = document.getElementById('pageCounterBtn');
+      const countVal = document.getElementById('counterVal');
+      let currentCount = 0;
+      countBtn.addEventListener('click', () => {
+        currentCount++;
+        countVal.textContent = currentCount;
+      });
+
+      // Dark Mode / Theme Toggle
+      const themeToggle = document.getElementById('themeToggle');
+      themeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+      });
+    </script>
+  </body>
+</html>
