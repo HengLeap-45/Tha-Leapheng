@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Grid Container Properties (សំខាន់បំផុត)-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+  display: grid;
+
+  /* កំណត់ Columns & Rows */
+  grid-template-columns: 200px 1fr 2fr auto;   /* px, fr, auto */
+  grid-template-rows: 100px 200px;
+
+  /* ប្រើ repeat() */
+  grid-template-columns: repeat(4, 1fr);       /* ៤ ជួរ ស្មើគ្នា */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive */
+
+  /* Gap */
+  gap: 20px;                    /* ទាំង rows និង columns */
+  row-gap: 30px;
+  column-gap: 15px;
+
+  /* តម្រឹមទាំង Grid */
+  justify-content: center;      /* ផ្ដៅឆ្វេង-កណ្តាល-ស្តាំ */
+  align-content: start;         /* ផ្ដៅលើ-កណ្តាល-ក្រោម */
+
+  /* Grid Areas (វិធីងាយបំផុត) */
+  grid-template-areas: 
+    "header header header"
+    "sidebar content content"
+    "footer footer footer";
+}
+
+        
+    </style>
+</head>
+<body><div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+    
+</body>
+</html>
+<!-- Grid Item Properties (កូន)-->
+ .item1 {
+  grid-column: 1 / 4;           /* ចាប់ផ្តើម column 1 រហូតដល់ 4 */
+  grid-column: span 3;          /* ពង្រីក ៣ ជួរ */
+
+  grid-row: 1 / 3;              /* ពង្រីក rows */
+  grid-row: span 2;
+
+  /* ឬប្រើ grid-area */
+  grid-area: header;
+
+  /* តម្រឹមខ្លួនឯង */
+  justify-self: center;         /* ផ្ដៅឆ្វេង-កណ្តាល-ស្តាំ */
+  align-self: end;              /* ផ្ដៅលើ-កណ្តាល-ក្រោម */
+}
+
+.item1 {
+  grid-column: 1 / 4;           /* ចាប់ផ្តើម column 1 រហូតដល់ 4 */
+  grid-column: span 3;          /* ពង្រីក ៣ ជួរ */
+
+  grid-row: 1 / 3;              /* ពង្រីក rows */
+  grid-row: span 2;
+
+  /* ឬប្រើ grid-area */
+  grid-area: header;
+
+  /* តម្រឹមខ្លួនឯង */
+  justify-self: center;         /* ផ្ដៅឆ្វេង-កណ្តាល-ស្តាំ */
+  align-self: end;              /* ផ្ដៅលើ-កណ្តាល-ក្រោម */
+}

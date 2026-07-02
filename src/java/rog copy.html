@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+	<head>
+		<title>School Management App</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<style>
+			body {
+				font-family: "Courier New", Courier, monospace;
+				color: brown;
+				background-color: azure;
+				text-align: center;
+				margin: 0%;
+			}
+			header {
+				border: 0;
+				padding: 5%;
+				font-size: 23px;
+			}
+			.container {
+				min-width: 200px;
+				border: 0;
+				border-radius: 0%;
+				box-shadow: 0;
+				margin: 200px;
+				background-color: rgb(234, 236, 244);
+				padding: 0%;
+				border: 20px;
+			}
+			.input {
+				padding: 10px;
+				text-align: center;
+				max-width: 10px;
+			}
+			div {
+				padding: 0%;
+				text-align: center;
+				margin: auto;
+				border: 0;
+				border-radius: 5px;
+			}
+			td.th {
+				max-width: none;
+				margin: auto;
+				text-align: center;
+				color: aliceblue;
+				background-color: brown;
+			}
+			.table {
+				text-align: center;
+				margin: 25px;
+			}
+			.td.th {
+				color: aquamarine;
+				text-align: center;
+				margin: auto;
+				border: 0cap;
+			}
+			thead {
+				text-align: center;
+				margin: 20px;
+			}
+			button {
+				background-color: black;
+				color: white;
+				margin-top: 20px;
+			}
+			div {
+				text-align: center;
+				background-color: rgb(36, 36, 37);
+				color: rgb(236, 234, 234);
+				font-family: "Courier New", Courier, monospace;
+				font-size: medium;
+				max-width: none;
+			}
+		</style>
+	</head>
+	<body>
+		<header>School Management System</header>
+
+		<div class="container">
+			<h3>Add Student</h3>
+			<input type="text" id="name" placeholder="Student Name" />
+			<br /><br /><br />
+			<input type="text" id="class" placeholder="Class" />
+			<br /><br /><br />
+			<input type="number" id="age" placeholder="Age" />
+			<br /><br /><br />
+			<button class="add-btn" onclick="addStudent()">Add Student</button>
+
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Class</th>
+						<th>Age</th>
+						<th>Action</th>
+					</tr>
+				</thead>
+				<tbody id="studentList"></tbody>
+			</table>
+
+			<div class="count" id="totalStudents">Total Students: 0</div>
+		</div>
+
+		<script>
+			let students = [];
+
+			function addStudent() {
+				let name = document.getElementById("name").value;
+				let studentClass = document.getElementById("class").value;
+				let age = document.getElementById("age").value;
+
+				if (name === "" || studentClass === "" || age === "") {
+					alert("Please fill all fields!");
+					return;
+				}
+
+				students.push({ name, studentClass, age });
+				displayStudents();
+
+				document.getElementById("name").value = "";
+				document.getElementById("class").value = "";
+				document.getElementById("age").value = "";
+			}
+
+			function displayStudents() {
+				let list = document.getElementById("studentList");
+				list.innerHTML = "";
+
+				students.forEach((student, index) => {
+					list.innerHTML += `
+                <tr>
+                    <td>${student.name}</td>
+                    <td>${student.studentClass}</td>
+                    <td>${student.age}</td>
+                    <td>
+                        <button class="delete-btn" onclick="deleteStudent(${index})">Delete</button>
+                    </td>
+                </tr>
+            `;
+				});
+
+				document.getElementById("totalStudents").innerText =
+					"Total Students: " + students.length;
+			}
+
+			function deleteStudent(index) {
+				students.splice(index, 1);
+				displayStudents();
+			}
+		</script>
+	</body>
+</html>

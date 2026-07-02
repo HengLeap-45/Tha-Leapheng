@@ -1,0 +1,10 @@
+body {
+	color: black;
+	background-color: antiquewhite;
+	font-size: large;
+}
+input {
+	text-align: center;
+	padding: 15px;
+	margin: auto;
+}
