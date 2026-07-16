@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+     </style>
+
+</head>
+<body>
+    <!-- section -->
+     <div class=" grid justify-items-center  w-full h-full ">
+        <section class="w-full max-w-3xl bg-linear-to-bl from-violet-500 to-fuchsia-500">
+            <!-- header -->
+            <h1 class="text-4xl text-white text-center  ">Will you marry me?</h1>
+            <!--option -->
+            <p class="text-center">Do you love me?😭</p>​
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUycXE0cWEyMTEzMXo4Y28zdzl5MGt6ZG16a3Q3ajBkZzQ2ejN4NDdqMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/T70hpBP1L0N7U0jtkq/giphy.gif" alt="" class="h-[400px]">
+            <!-- group button -->
+             <br>
+             <div class="flex gap-10">
+            <button id="yes" class="bg-blue-600 py-5  rounded-sm w-50 px-3 hover:bg-blue-500">Yes</button>
+             <button id="no" class="bg-red-600 py-5 rounded-sm w-50 px-3 hover:bg-red-500">No</button>
+             </div>
+        
+          
+        </section>
+     </div>
+       <script src="../js/practice-with-dom.js"></script>
+</body>
+</html>

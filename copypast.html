@@ -1,0 +1,50 @@
+!<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confession</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="grid place-content-center h-screen">
+    <section
+      class="w-full max-w-md bg-linear-to-br from-pink-500 to-orange-300 p-10 rounded-xl"
+    >
+      <!-- title -->
+      <h2 class="text-3xl text-white text-center">
+        I want to ask you something
+      </h2>
+      <!-- textShow -->
+      <p id="textShow" class="text-2xl text-white text-center">
+        Do you like me?
+      </p>
+      <!-- feelImage -->
+      <img
+        id="feelImage"
+        class="h-[250px]"
+        src="https://gifdb.com/images/thumbnail/white-cat-with-flowers-and-heart-878r5rrma27z7r56.gif"
+        alt="cat with flower"
+      />
+      <!-- group button -->
+      <div class="flex justify-center gap-5">
+        <!-- yes button -->
+        <button
+          id="yesBtn"
+          class="bg-white px-8 py-3 rounded-md font-bold text-pink-600"
+        >
+          Yes
+        </button>
+        <!-- no button -->
+        <button
+          id="noBtn"
+          class=" bg-white px-8 py-3 rounded-md font-bold text-blue-600"
+        >
+          No
+        </button>
+      </div>
+    </section>
+    <!-- script -->
+    <script src="../js/practice-with-dom.js"></script>
+  </body>
+</html>
