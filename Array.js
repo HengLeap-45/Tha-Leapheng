@@ -26,7 +26,6 @@ console.log("empty:", empty)
 console.log("length:", empty.length)
 // empty slot 
 console.log("empty slot:", empty[1])
-
 const data = ["heng","Keap","Lyly"]
 console.log("data:",data)
 // with unshift add new item to the beginning of an array
@@ -44,21 +43,16 @@ console.log("after using shift :" , data )
 // with splice remove the mutiple element
 data.splice(1,3)
 console.log("after using splice :" , data )
-
 const user = ["userOne","userTwo","userThree","userFour","userFive"];
 // using splice method for data delete multi items
 user.splice(1,3)
 console.log("Delete 3 user in array :" , user )
-
 // using splice method for data delete 
-
 user.splice(1,1,"userSix")
 console.log("Delete 1 user and add new item in array :" , user )
-
 // using concat for merge 
 const newArr = data.concat(user,vegetables,fruits)
 console.log("after concat: " , newArr)
-
 // spread syntax
 const color =["black","red","white"]
 console.log("color:", color)
@@ -70,23 +64,18 @@ console.log("copyColor2:", copyColor2)
 //  slice use for copy element in an array (start , end)
 const copyColor3 = color.slice(1,3);
 console.log("copyColor3:", copyColor3)
-
 // object in array 
 const userInfo3 ={
      username :"HENG",
      pob : "Poipet",
      userId : 1001,
      userAge : 18 ,
-     
-
 };
-
 const userInfo2 = {
     id :1002 ,
     username : "Leap",
     pob : "Pnom penh",
     userAge : 19,
 };
-
 const userInfo =[userInfo3,userInfo2]
 console.log("userInfo:",userInfo)

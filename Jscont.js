@@ -13,3 +13,9 @@ console.log (ProductInfo1);
 const salary = 0;
 const income = salary || 150;
 console.log("income :", income)
+
+
+function Greet(name){
+    console.log("Hello"+ name);
+}
+Greet("Heng")

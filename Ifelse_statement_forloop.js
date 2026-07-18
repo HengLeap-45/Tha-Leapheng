@@ -11,7 +11,7 @@ else if (score >70){
 } 
 else if (score >60){
     console.log("Your score is D")
-} 
+}
 else if (score >50){
     console.log("Your score is E")
 } 

@@ -9,7 +9,7 @@ let result = num1 + num2 ;
       let isSubmitting = true ;
       console.log("isSubmitting :", typeof isSubmitting);
 
-    //    immutableno
+    //    immutable
         let str = " Hello bro Code ";
         str = "Gretting ";
         console.log("str :" , str);
@@ -68,3 +68,4 @@ let result = num1 + num2 ;
     console.log(Object.values(userInformation));
     // object key and  value
     console.log(Object.entries(userInformation));
+    
