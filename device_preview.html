@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Device Responsive Showcase Previewer</title>
+    <!-- Tailwind CSS v4 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen antialiased flex flex-col">
+    <!-- Header -->
+    <header class="bg-slate-900 border-b border-slate-800 py-4 px-6 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <h1 class="text-xl sm:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-indigo-400 to-violet-400">
+                    3-Device Responsive Live Previewer
+                </h1>
+                <p class="text-xs sm:text-sm text-slate-400">
+                    Showing <a href="sematic.html" class="text-blue-400 hover:underline">sematic.html</a> loaded inside 3 live device frames simultaneously.
+                </p>
+            </div>
+            <div class="flex items-center gap-3">
+                <button onclick="reloadIframes()" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-semibold transition-all duration-300 shadow-md shadow-blue-500/10">
+                    Refresh Preview
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="flex-grow p-6 lg:p-12 overflow-x-auto">
+        <div class="min-w-[1200px] xl:min-w-0 flex flex-col xl:flex-row justify-center items-start gap-12">
+            
+            <!-- 1. MOBILE PHONE FRAME (iPhone style) -->
+            <div class="flex flex-col items-center gap-4">
+                <div class="flex items-center justify-between w-[360px] px-2 text-sm text-slate-400">
+                    <span class="font-bold text-white flex items-center gap-1.5">
+                        <span class="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse"></span>
+                        Mobile view
+                    </span>
+                    <span>360 x 740 px</span>
+                </div>
+                <!-- Device Mockup Shell -->
+                <div class="relative w-[360px] h-[740px] bg-slate-900 rounded-[48px] p-4 shadow-2xl border-4 border-slate-800 ring-1 ring-slate-700/50 flex flex-col overflow-hidden">
+                    <!-- Speaker Notch -->
+                    <div class="absolute top-2 left-1/2 -translate-x-1/2 w-32 h-4 bg-slate-850 rounded-full z-20 flex items-center justify-center">
+                        <div class="w-12 h-1 bg-slate-800 rounded-full"></div>
+                    </div>
+                    <!-- Screen Iframe Container -->
+                    <div class="flex-grow w-full h-full bg-slate-950 rounded-[32px] overflow-hidden border border-slate-800/50 relative">
+                        <iframe id="mobile-iframe" src="sematic.html" class="w-full h-full border-none"></iframe>
+                    </div>
+                    <!-- Home Indicator Bar -->
+                    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 w-28 h-1 bg-slate-800 rounded-full z-20"></div>
+                </div>
+            </div>
+
+            <!-- 2. TABLET FRAME (iPad style) -->
+            <div class="flex flex-col items-center gap-4">
+                <div class="flex items-center justify-between w-[520px] px-2 text-sm text-slate-400">
+                    <span class="font-bold text-white flex items-center gap-1.5">
+                        <span class="w-2.5 h-2.5 bg-indigo-500 rounded-full"></span>
+                        Tablet view
+                    </span>
+                    <span>768 x 1024 px (Scaled)</span>
+                </div>
+                <!-- Device Mockup Shell -->
+                <div class="relative w-[520px] h-[693px] bg-slate-900 rounded-[36px] p-5 shadow-2xl border-4 border-slate-800 ring-1 ring-slate-700/50 flex flex-col overflow-hidden">
+                    <!-- Screen Iframe Container -->
+                    <div class="flex-grow w-full h-full bg-slate-950 rounded-[20px] overflow-hidden border border-slate-800/50 relative">
+                        <iframe id="tablet-iframe" src="sematic.html" class="absolute w-[768px] h-[1024px] origin-top-left scale-[0.625] border-none"></iframe>
+                    </div>
+                    <!-- Home Button Circle -->
+                    <div class="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-6 h-6 rounded-full border border-slate-800 flex items-center justify-center">
+                        <div class="w-2 h-2 bg-slate-800 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. DESKTOP LAPTOP FRAME (Macbook style) -->
+            <div class="flex flex-col items-center gap-4">
+                <div class="flex items-center justify-between w-[640px] px-2 text-sm text-slate-400">
+                    <span class="font-bold text-white flex items-center gap-1.5">
+                        <span class="w-2.5 h-2.5 bg-blue-500 rounded-full"></span>
+                        Desktop view
+                    </span>
+                    <span>1280 x 800 px (Scaled)</span>
+                </div>
+                <!-- Device Mockup Shell -->
+                <div class="relative w-[640px] h-[400px] bg-slate-900 rounded-2xl p-4 shadow-2xl border-4 border-slate-800 ring-1 ring-slate-700/50 flex flex-col overflow-hidden">
+                    <!-- Screen Iframe Container -->
+                    <div class="flex-grow w-full h-full bg-slate-950 rounded-lg overflow-hidden border border-slate-800/50 relative">
+                        <iframe id="desktop-iframe" src="sematic.html" class="absolute w-[1280px] h-[800px] origin-top-left scale-[0.47] border-none"></iframe>
+                    </div>
+                </div>
+                <!-- Laptop Keyboard Base Stand -->
+                <div class="relative w-[720px] h-4 bg-gradient-to-b from-slate-800 to-slate-900 rounded-b-xl border-t border-slate-750 -mt-4 shadow-lg flex items-center justify-center">
+                    <div class="w-16 h-1.5 bg-slate-950 rounded-full -mt-2"></div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-6 text-center text-xs sm:text-sm text-slate-500">
+        <p>&copy; 2026 Tha Leap Heng. Powered by Tailwind CSS &amp; HTML5 Responsive Design.</p>
+    </footer>
+
+    <!-- Interactive script to reload and sync frames if needed -->
+    <script>
+        function reloadIframes() {
+            document.getElementById('mobile-iframe').contentWindow.location.reload();
+            document.getElementById('tablet-iframe').contentWindow.location.reload();
+            document.getElementById('desktop-iframe').contentWindow.location.reload();
+        }
+    </script>
+</body>
+</html>
