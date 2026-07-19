@@ -2,6 +2,7 @@ console.log("Start")
 setTimeout(() => {
     console.log("Content")
 }, 5000);
+// using .then
 console.log("Bro code")
 let productData = fetch("https://api.escuelajs.co/api/v1/products")
   .then((response) => response.js())
@@ -31,3 +32,9 @@ let newArr = arr.map((num) => {
   return console.log(NewNum);
 
 });
+async function getdata(){
+  const   linkServer = await fetch("https://api.escuelajs.co/api/v1/products");
+  const   convertTojson = await linkServer.json() 
+  return console.log("Convert to JSON format :",convertTojson);
+}
+getdata();

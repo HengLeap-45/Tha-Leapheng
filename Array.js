@@ -6,7 +6,7 @@ const num3 = 3 ;
 console.log (number)
 // index start from 0 
 // access item in an array  by index
-console.log ("1.",number[0])
+console.log("1.",number[0])
 console.log("2.", number[1])
 console.log("3.", number[2])
 console.log("4.", number[3])
